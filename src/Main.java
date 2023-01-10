@@ -22,6 +22,11 @@ public class Main {
         System.out.println(kamaz);
         System.out.println(zil);
         System.out.println(man);
+        bmv.startMoving();
+        bmv.stopMoving();
+
+
+
 
     }
 }
