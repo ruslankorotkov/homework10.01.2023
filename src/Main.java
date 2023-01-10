@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Car lada = new Car("Lada", "Granta", 1.7);
@@ -11,7 +13,11 @@ public class Main {
         Truck kamaz = new Truck("Камаз", "компас", 12.45);
         Truck zil = new Truck("Зил", "43", 24.12);
         Truck man = new Truck("Man", "TGL", 12.45);
-        System.out.println(lada);
+        Driver ivan = new Driver(" Иван ", "B", " 6 лет ");
+        Driver oleg = new Driver(" Олег ", "C", " 5 лет ");
+        Driver boris = new Driver(" Борис ", "D", " 7 лет ");
+        bmv.startMoving();
+        bmv.stopMoving();
         System.out.println(audi);
         System.out.println(bmv);
         System.out.println(kia);
@@ -22,11 +28,12 @@ public class Main {
         System.out.println(kamaz);
         System.out.println(zil);
         System.out.println(man);
-        bmv.startMoving();
-        bmv.stopMoving();
-
-
-
-
+        System.out.println(boris.getName());
+        boris.startMoving();
+        boris.stopMoving();
+        boris.refuelCar();
+        System.out.println(" водитель " + boris.getName() + " управляет автомобилем " + мercedes.getBrand() + " и будет участвовать в заезде. ");
+        System.out.println(" водитель " + oleg + " управляет автомобилем " + kamaz + " и будет участвовать в заезде. ");
+        System.out.println(" водитель" + ivan.getName() + " управляет автомобилем " + lada + " и будет участвовать в заезде. ");
     }
 }

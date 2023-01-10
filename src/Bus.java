@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Bus extends Transport implements Competing{
+public class Bus extends Transport implements Competing {
     public Bus(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
     }
@@ -28,5 +28,6 @@ public class Bus extends Transport implements Competing{
                 ", объём двигателя " + getEngineVolume() +
                 ", л.куб. " +
                 '}';
+
     }
 }

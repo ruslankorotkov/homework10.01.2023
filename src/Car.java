@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Car extends Transport implements Competing{
+public class Car extends Transport implements Competing {
     public Car(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
     }
@@ -22,12 +22,13 @@ public class Car extends Transport implements Competing{
     @Override
     public String toString() {
         return " ЛЕГКОВАЯ МАШИНА {" +
-                "ALL_COMPETING_COMMANDS=" + Arrays.toString(ALL_COMPETING_COMMANDS) +
+                " МЕТОДЫ " + Arrays.toString(ALL_COMPETING_COMMANDS) +
                 ", бренд '" + getBrand() + '\'' +
                 ", модель " + getModel() + '\'' +
                 ", объём двигателя " + getEngineVolume() +
                 ", л.куб. " +
                 '}';
+
     }
 }
 

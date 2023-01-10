@@ -21,7 +21,7 @@ public class Truck extends Transport implements Competing {
     @Override
     public String toString() {
         return " ГРУЗОВИК {" +
-                "ALL_COMPETING_COMMANDS=" + Arrays.toString(ALL_COMPETING_COMMANDS) +
+                " МЕТОДЫ " + Arrays.toString(ALL_COMPETING_COMMANDS) +
                 ", бренд '" + getBrand() + '\'' +
                 ", модель " + getModel() + '\'' +
                 ", объём двигателя " + getEngineVolume() +

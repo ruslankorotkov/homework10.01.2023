@@ -3,7 +3,6 @@ public class Driver {
     private String driverLicense;
     private String experience;
 
-
     public Driver(String name, String driverLicense, String experience) {
         if (name == null || name.isEmpty() || name.isBlank()) {
             this.name = "default";
@@ -58,6 +57,15 @@ public class Driver {
         System.out.println(" ЗАПРАВИТЬ АВТО ");
     }
 
+    @Override
+    public String toString() {
+        return " ВОДИТЕЛЬ {" +
+                " ИМЯ '" + name + '\'' +
+                ", ПРАВА КАТЕГОРИИ '" + driverLicense + '\'' +
+                ", СТАЖ'" + experience + '\'' +
+                '}';
+    }
 }
+
 
 

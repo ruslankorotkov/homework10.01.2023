@@ -1,3 +1,4 @@
 public interface Competing {
-    String [] allCompetingCommand();
+    String[] allCompetingCommand();
+
 }
