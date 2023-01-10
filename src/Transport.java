@@ -65,5 +65,6 @@ public abstract class Transport implements Competing {
                 ", объём двигателя " + engineVolume +
                 ", л.куб. " +
                 '}';
+
     }
 }

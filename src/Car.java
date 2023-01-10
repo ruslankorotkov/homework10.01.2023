@@ -28,7 +28,6 @@ public class Car extends Transport implements Competing {
                 ", объём двигателя " + getEngineVolume() +
                 ", л.куб. " +
                 '}';
-
     }
 }
 

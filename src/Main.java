@@ -35,5 +35,6 @@ public class Main {
         System.out.println(" водитель " + boris.getName() + " управляет автомобилем " + мercedes.getBrand() + " и будет участвовать в заезде. ");
         System.out.println(" водитель " + oleg + " управляет автомобилем " + kamaz + " и будет участвовать в заезде. ");
         System.out.println(" водитель" + ivan.getName() + " управляет автомобилем " + lada + " и будет участвовать в заезде. ");
+
     }
 }

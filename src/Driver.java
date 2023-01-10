@@ -64,6 +64,7 @@ public class Driver {
                 ", ПРАВА КАТЕГОРИИ '" + driverLicense + '\'' +
                 ", СТАЖ'" + experience + '\'' +
                 '}';
+
     }
 }
 
