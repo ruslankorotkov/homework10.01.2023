@@ -3,7 +3,6 @@ public abstract class Transport {
     private String model;
     private double engineVolume;
 
-
     public Transport(String brand, String model, double engineVolume) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
@@ -53,7 +52,7 @@ public abstract class Transport {
                 "бренд '" + brand + '\'' +
                 ", модель '" + model + '\'' +
                 ", объём двигателя " + engineVolume +
-                " л.куб "+
+                " л.куб " +
                 '}';
     }
 }
