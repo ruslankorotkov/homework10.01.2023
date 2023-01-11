@@ -1,33 +1,36 @@
 import java.util.Arrays;
 
-public class Car extends Transport implements Competing {
-    public Car(String brand, String model, double engineVolume) {
-        super(brand, model, engineVolume);
+public class Car extends Transport <DriverB>  {
+
+
+    public Car(String brand, String model, double engineVolume, DriverB driver) {
+        super(brand, model, engineVolume, driver);
     }
 
-    public void startMoving() {
-        System.out.println(" НАЧАТЬ ДВИЖЕНИЕ ");
+    @Override
+    public void startMoving() {System.out.println(" Легковой автомобиль марки: "+ getBrand()+ " НАЧАЛ ДВИЖЕНИЕ ");
+
     }
 
-    public void stopMoving() {
-        System.out.println(" ЗАКОНЧИТЬ ДВИЖЕНИЕ ");
+    @Override
+    public void stopMoving() {System.out.println(" Легковой автомобиль марки: "+ getBrand()+ " ЗАКОНЧИЛ ДВИЖЕНИЕ ");
+
     }
 
 
     @Override
-    public String[] allCompetingCommand() {
-        return ALL_COMPETING_COMMANDS;
+    public void pitStop() {System.out.println( " ПИТ-СТОП у легковой машины " );
+
     }
 
     @Override
-    public String toString() {
-        return " ЛЕГКОВАЯ МАШИНА {" +
-                " МЕТОДЫ " + Arrays.toString(ALL_COMPETING_COMMANDS) +
-                ", бренд '" + getBrand() + '\'' +
-                ", модель " + getModel() + '\'' +
-                ", объём двигателя " + getEngineVolume() +
-                ", л.куб. " +
-                '}';
+    public void bestTimeCycle() {System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у легковой машины ");
+
+    }
+
+    @Override
+    public void maxSpeed() {System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у легковой машины ");
+
     }
 }
 

@@ -1,32 +1,38 @@
 import java.util.Arrays;
 
-public class Bus extends Transport implements Competing {
-    public Bus(String brand, String model, double engineVolume) {
-        super(brand, model, engineVolume);
+public class Bus extends Transport <DriverD> {
+
+
+    public Bus(String brand, String model, double engineVolume, DriverD driver) {
+        super(brand, model, engineVolume, driver);
     }
+    @Override
 
     public void startMoving() {
-        System.out.println(" НАЧАТЬ ДВИЖЕНИЕ ");
+        System.out.println(" Автобус марки: "+ getBrand()+ " НАЧАЛ ДВИЖЕНИЕ ");
     }
-
+    @Override
     public void stopMoving() {
-        System.out.println(" ЗАКОНЧИТЬ ДВИЖЕНИЕ ");
+        System.out.println(" Автобус марки: "+ getBrand()+ " ЗАКОНЧИЛ ДВИЖЕНИЕ ");
     }
-
 
     @Override
-    public String[] allCompetingCommand() {
-        return ALL_COMPETING_COMMANDS;
+    public void pitStop() {System.out.println( " ПИТ-СТОП у автобуса " );
+
+    }
+
+    @Override
+    public void bestTimeCycle() {System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у автобуса ");
+
+    }
+
+    @Override
+    public void maxSpeed() {System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у автобуса ");
+
     }
 
     @Override
     public String toString() {
-        return " АВТОБУС {" +
-                " МЕТОДЫ " + Arrays.toString(ALL_COMPETING_COMMANDS) +
-                ", бренд '" + getBrand() + '\'' +
-                ", модель " + getModel() + '\'' +
-                ", объём двигателя " + getEngineVolume() +
-                ", л.куб. " +
-                '}';
+        return " АВТОБУС " + super.toString();
     }
 }

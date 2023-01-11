@@ -1,4 +1,4 @@
-public class Driver {
+public abstract class Driver {
     private String name;
     private String driverLicense;
     private String experience;
@@ -19,7 +19,9 @@ public class Driver {
         } else {
             this.experience = experience;
         }
+
     }
+
 
     public String getName() {
         return name;
@@ -29,13 +31,6 @@ public class Driver {
         this.name = name;
     }
 
-    public String getDriverLicense() {
-        return driverLicense;
-    }
-
-    public void setDriverLicense(String driverLicense) {
-        this.driverLicense = driverLicense;
-    }
 
     public String getExperience() {
         return experience;
@@ -45,25 +40,21 @@ public class Driver {
         this.experience = experience;
     }
 
-    public void startMoving() {
-        System.out.println(" НАЧАТЬ ДВИЖЕНИЕ ");
-    }
+    public abstract void startMove();
 
-    public void stopMoving() {
-        System.out.println(" ОСТАНОВИТЬСЯ ");
-    }
 
-    public void refuelCar() {
-        System.out.println(" ЗАПРАВИТЬ АВТО ");
-    }
+    public abstract void stopMove();
+
+
+    public abstract void refuel();
+
 
     @Override
     public String toString() {
-        return " ВОДИТЕЛЬ {" +
-                " ИМЯ '" + name + '\'' +
-                ", ПРАВА КАТЕГОРИИ '" + driverLicense + '\'' +
-                ", СТАЖ'" + experience + '\'' +
-                '}';
+        return " ВОДИТЕЛЬ:" +
+                " ИМЯ: " + name +
+                ", ПРАВА КАТЕГОРИИ:" + driverLicense +
+                ", СТАЖ:" + experience;
 
     }
 }

@@ -1,16 +1,14 @@
 import java.util.Arrays;
 
-public abstract class Transport implements Competing {
-    public static final String PIT_STOP_COMMANDS = " Пит-стоп  ";
-    public static final String BEST_LAP_TIME_COMMANDS = " Лучшее время круга ";
-    public static final String MAX_SPEED_COMMANDS = "Максимальная скорость ";
-
-    public final String[] ALL_COMPETING_COMMANDS = new String[]{PIT_STOP_COMMANDS, BEST_LAP_TIME_COMMANDS, MAX_SPEED_COMMANDS};
+public abstract class Transport <T extends Driver>implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
+    private T driver;
 
-    public Transport(String brand, String model, double engineVolume) {
+
+
+    public Transport(String brand, String model, double engineVolume, T driver) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
         } else {
@@ -26,6 +24,9 @@ public abstract class Transport implements Competing {
         } else {
             this.engineVolume = engineVolume;
         }
+        setDriver(driver);
+
+
     }
 
     public String getBrand() {
@@ -52,19 +53,28 @@ public abstract class Transport implements Competing {
         this.engineVolume = engineVolume;
     }
 
-    public String[] getALL_COMPETING_COMMANDS() {
-        return ALL_COMPETING_COMMANDS;
+    public T getDriver() {
+        return driver;
     }
+
+    public void setDriver(T driver) {
+        this.driver = driver;
+    }
+
+
+
+    public abstract void startMoving();
+
+    public abstract void stopMoving();
+
 
     @Override
     public String toString() {
-        return " ТРАНСПОРТ {" +
-                " МЕТОДЫ" + Arrays.toString(ALL_COMPETING_COMMANDS) +
-                ", бренд '" + brand + '\'' +
-                ", модель " + model + '\'' +
-                ", объём двигателя " + engineVolume +
-                ", л.куб. " +
-                '}';
+        return " : " +
+                ", марка: " + brand +
+                ", модель: " + model +
+                ", объём двигателя: " + engineVolume +
+                ", л.куб. ";
 
     }
 }

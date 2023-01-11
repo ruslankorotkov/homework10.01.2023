@@ -1,32 +1,34 @@
 import java.util.Arrays;
 
-public class Truck extends Transport implements Competing {
-    public Truck(String brand, String model, double engineVolume) {
-        super(brand, model, engineVolume);
-    }
+public class Truck extends Transport <DriverC>  {
 
-    public void startMoving() {
-        System.out.println(" НАЧАТЬ ДВИЖЕНИЕ ");
-    }
-
-    public void stopMoving() {
-        System.out.println(" ЗАКОНЧИТЬ ДВИЖЕНИЕ ");
+    public Truck(String brand, String model, double engineVolume, DriverC driver) {
+        super(brand, model, engineVolume, driver);
     }
 
     @Override
-    public String[] allCompetingCommand() {
-        return ALL_COMPETING_COMMANDS;
+    public void startMoving() {System.out.println(" Грузовой  автомобиль марки: "+ getBrand()+ " НАЧАЛ ДВИЖЕНИЕ ");
+
     }
 
     @Override
-    public String toString() {
-        return " ГРУЗОВИК {" +
-                " МЕТОДЫ " + Arrays.toString(ALL_COMPETING_COMMANDS) +
-                ", бренд '" + getBrand() + '\'' +
-                ", модель " + getModel() + '\'' +
-                ", объём двигателя " + getEngineVolume() +
-                ", л.куб. " +
-                '}';
+    public void stopMoving() {System.out.println(" Грузовой автомобиль марки: "+ getBrand()+ " ЗАКОНЧИЛ ДВИЖЕНИЕ ");
+
+    }
+
+
+    @Override
+    public void pitStop() {System.out.println( " ПИТ-СТОП у грузовика " );
+
+    }
+
+    @Override
+    public void bestTimeCycle() {System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у грузовика ");
+
+    }
+
+    @Override
+    public void maxSpeed() {System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у грузовика");
 
     }
 }
