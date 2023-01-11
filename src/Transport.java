@@ -1,12 +1,10 @@
 import java.util.Arrays;
 
-public abstract class Transport <T extends Driver>implements Competing {
+public abstract class Transport<T extends Driver> implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
     private T driver;
-
-
 
     public Transport(String brand, String model, double engineVolume, T driver) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
@@ -25,8 +23,6 @@ public abstract class Transport <T extends Driver>implements Competing {
             this.engineVolume = engineVolume;
         }
         setDriver(driver);
-
-
     }
 
     public String getBrand() {
@@ -62,7 +58,6 @@ public abstract class Transport <T extends Driver>implements Competing {
     }
 
 
-
     public abstract void startMoving();
 
     public abstract void stopMoving();
@@ -70,11 +65,10 @@ public abstract class Transport <T extends Driver>implements Competing {
 
     @Override
     public String toString() {
-        return " : " +
-                ", марка: " + brand +
-                ", модель: " + model +
-                ", объём двигателя: " + engineVolume +
-                ", л.куб. ";
-
+        return
+                " марка: " + brand +
+                        ", модель: " + model +
+                        ", объём двигателя: " + engineVolume +
+                        ", л.куб. ";
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Car extends Transport <DriverB>  {
+public class Car extends Transport<DriverB> {
 
 
     public Car(String brand, String model, double engineVolume, DriverB driver) {
@@ -8,28 +8,33 @@ public class Car extends Transport <DriverB>  {
     }
 
     @Override
-    public void startMoving() {System.out.println(" Легковой автомобиль марки: "+ getBrand()+ " НАЧАЛ ДВИЖЕНИЕ ");
+    public void startMoving() {
+        System.out.println(" Легковой автомобиль марки: " + getBrand() + " НАЧАЛ ДВИЖЕНИЕ ");
 
     }
 
     @Override
-    public void stopMoving() {System.out.println(" Легковой автомобиль марки: "+ getBrand()+ " ЗАКОНЧИЛ ДВИЖЕНИЕ ");
+    public void stopMoving() {
+        System.out.println(" Легковой автомобиль марки: " + getBrand() + " ЗАКОНЧИЛ ДВИЖЕНИЕ ");
 
     }
 
 
     @Override
-    public void pitStop() {System.out.println( " ПИТ-СТОП у легковой машины " );
+    public void pitStop() {
+        System.out.println(" ПИТ-СТОП у легковой машины ");
 
     }
 
     @Override
-    public void bestTimeCycle() {System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у легковой машины ");
+    public void bestTimeCycle() {
+        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у легковой машины ");
 
     }
 
     @Override
-    public void maxSpeed() {System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у легковой машины ");
+    public void maxSpeed() {
+        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у легковой машины ");
 
     }
 }

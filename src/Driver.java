@@ -1,25 +1,21 @@
 public abstract class Driver {
     private String name;
-    private String driverLicense;
+    private boolean driverLicense;
     private String experience;
 
-    public Driver(String name, String driverLicense, String experience) {
+    public Driver(String name, boolean driverLicense, String experience) {
         if (name == null || name.isEmpty() || name.isBlank()) {
             this.name = "default";
         } else {
             this.name = name;
         }
-        if (driverLicense == null || driverLicense.isEmpty() || driverLicense.isBlank()) {
-            this.driverLicense = "default";
-        } else {
-            this.driverLicense = driverLicense;
-        }
+        this.driverLicense = driverLicense;
+
         if (experience == null || experience.isEmpty() || experience.isBlank()) {
             this.experience = "default";
         } else {
             this.experience = experience;
         }
-
     }
 
 
@@ -55,7 +51,6 @@ public abstract class Driver {
                 " ИМЯ: " + name +
                 ", ПРАВА КАТЕГОРИИ:" + driverLicense +
                 ", СТАЖ:" + experience;
-
     }
 }
 
