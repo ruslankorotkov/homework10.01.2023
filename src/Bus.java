@@ -20,19 +20,19 @@ public class Bus extends Transport<DriverD> {
 
     @Override
     public void pitStop() {
-        System.out.println(" ПИТ-СТОП у автобуса ");
+        System.out.println(" ПИТ-СТОП у автобуса " + getBrand());
 
     }
 
     @Override
     public void bestTimeCycle() {
-        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у автобуса ");
+        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у автобуса " + getBrand());
 
     }
 
     @Override
     public void maxSpeed() {
-        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у автобуса ");
+        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у автобуса " + getBrand());
 
     }
 

@@ -22,20 +22,25 @@ public class Car extends Transport<DriverB> {
 
     @Override
     public void pitStop() {
-        System.out.println(" ПИТ-СТОП у легковой машины ");
+        System.out.println(" ПИТ-СТОП у легковой машины " + getBrand());
 
     }
 
     @Override
     public void bestTimeCycle() {
-        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у легковой машины ");
+        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у легковой машины " + getBrand());
 
     }
 
     @Override
     public void maxSpeed() {
-        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у легковой машины ");
+        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у легковой машины " + getBrand());
 
+    }
+
+    @Override
+    public String toString() {
+        return " ЛЕГКОВОЙ АВТОМОБИЛЬ ";
     }
 }
 

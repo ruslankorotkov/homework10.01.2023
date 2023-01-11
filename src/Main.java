@@ -14,7 +14,6 @@ public class Main {
         Truck kamaz = new Truck("Камаз", "компас", 12.45, oleg);
         Truck zil = new Truck("Зил", "43", 24.12, oleg);
         Truck man = new Truck("Man", "TGL", 12.45, oleg);
-
         System.out.println(" водитель " + boris.getName() + " управляет автомобилем " + мercedes + " и будет участвовать в заезде. ");
         System.out.println(" водитель " + oleg + " управляет автомобилем " + kamaz + " и будет участвовать в заезде. ");
         System.out.println(" водитель" + ivan.getName() + " управляет автомобилем " + lada.getBrand() + " и будет участвовать в заезде. ");
@@ -23,5 +22,8 @@ public class Main {
         ivan.refuel();
         lada.startMoving();
         lada.stopMoving();
+        lada.pitStop();
+        lada.bestTimeCycle();
+        lada.maxSpeed();
     }
 }

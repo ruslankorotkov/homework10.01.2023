@@ -21,20 +21,25 @@ public class Truck extends Transport<DriverC> {
 
     @Override
     public void pitStop() {
-        System.out.println(" ПИТ-СТОП у грузовика ");
+        System.out.println(" ПИТ-СТОП у грузовика " + getBrand());
 
     }
 
     @Override
     public void bestTimeCycle() {
-        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у грузовика ");
+        System.out.println("  ЛУЧШЕЕ ВРЕМЯ КРУГА у грузовика " + getBrand());
 
     }
 
     @Override
     public void maxSpeed() {
-        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у грузовика");
+        System.out.println(" МАКСИМАЛЬНАЯ СКОРОСТЬ у грузовика" + getBrand());
 
+    }
+
+    @Override
+    public String toString() {
+        return " ГРУЗОВИК ";
     }
 }
 

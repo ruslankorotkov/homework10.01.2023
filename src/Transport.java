@@ -62,7 +62,6 @@ public abstract class Transport<T extends Driver> implements Competing {
 
     public abstract void stopMoving();
 
-
     @Override
     public String toString() {
         return
