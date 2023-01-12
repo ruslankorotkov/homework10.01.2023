@@ -17,7 +17,5 @@ public class DriverC extends Driver {
     @Override
     public void refuel() {
         System.out.println("Водитель категории C " + getName() + " ЗАПРАВИЛ АВТО ");
-
-
     }
 }

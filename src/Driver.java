@@ -9,7 +9,11 @@ public abstract class Driver {
         } else {
             this.name = name;
         }
-        this.driverLicense = driverLicense;
+        if (driverLicense == false) {
+            System.out.println(" ПРЕДУПРЕЖДЕНИЕ Водитель " + getName() + " не имеет прав и неможет участвовать в заезде .");
+        } else {
+            this.driverLicense = true;
+        }
 
         if (experience == null || experience.isEmpty() || experience.isBlank()) {
             this.experience = "default";

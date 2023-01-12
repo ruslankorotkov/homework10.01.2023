@@ -41,6 +41,7 @@ public class Car extends Transport<DriverB> {
     @Override
     public String toString() {
         return " ЛЕГКОВОЙ АВТОМОБИЛЬ ";
+
     }
 }
 

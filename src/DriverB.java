@@ -17,7 +17,5 @@ public class DriverB extends Driver {
     @Override
     public void refuel() {
         System.out.println("Водитель категории B " + getName() + " ЗАПРАВИЛ АВТО ");
-
-
     }
 }

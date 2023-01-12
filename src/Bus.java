@@ -40,4 +40,5 @@ public class Bus extends Transport<DriverD> {
     public String toString() {
         return " АВТОБУС " + super.toString();
     }
+
 }

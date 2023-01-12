@@ -25,5 +25,6 @@ public class Main {
         lada.pitStop();
         lada.bestTimeCycle();
         lada.maxSpeed();
+
     }
 }

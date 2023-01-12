@@ -41,5 +41,6 @@ public class Truck extends Transport<DriverC> {
     public String toString() {
         return " ГРУЗОВИК ";
     }
+
 }
 
