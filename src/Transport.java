@@ -1,10 +1,12 @@
-public abstract class Transport {
+import java.util.Arrays;
+
+public abstract class Transport<T extends Driver> implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
+    private T driver;
 
-
-    public Transport(String brand, String model, double engineVolume) {
+    public Transport(String brand, String model, double engineVolume, T driver) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
         } else {
@@ -19,8 +21,8 @@ public abstract class Transport {
             this.engineVolume = 1.5;
         } else {
             this.engineVolume = engineVolume;
-
         }
+        setDriver(driver);
     }
 
     public String getBrand() {
@@ -47,13 +49,25 @@ public abstract class Transport {
         this.engineVolume = engineVolume;
     }
 
+    public T getDriver() {
+        return driver;
+    }
+
+    public void setDriver(T driver) {
+        this.driver = driver;
+    }
+
+
+    public abstract void startMoving();
+
+    public abstract void stopMoving();
+
     @Override
     public String toString() {
-        return " Транспорт {" +
-                "бренд '" + brand + '\'' +
-                ", модель '" + model + '\'' +
-                ", объём двигателя " + engineVolume +
-                " л.куб "+
-                '}';
+        return
+                " марка: " + brand +
+                        ", модель: " + model +
+                        ", объём двигателя: " + engineVolume +
+                        ", л.куб. ";
     }
 }
